@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
+  <title>Pruebas D3: Entendiendo geoPath 1</title>
+  <style>
+    #popup {
+      position: absolute;
+      display: none;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div id="EjemplogeoPath"> </div>
+  <div id="popup">Hola Mundo</div>
+
+  <script>
+    var svg = d3.select("#EjemplogeoPath")
+      .append("svg")
+      .attr("width", 800)
+      .attr("height", 400);
+
+    var trianguloGeoJson = {
+      "type": "FeatureCollection", 
+      "features": [
+        {
+          "type": "Feature", 
+          "properties": {
+            "name": "Triangulo",
+          },
+          "geometry": {
+            "type": "Polygon", 
+            "coordinates": [[
+              [-78.93, 36.00],
+              [-70.67, 10.78],
+              [-89.04, 10.78],
+              [-78.93, 36.00]
+            ]]
+          }
+        }
+      ]
+    };
+
+    var proyeccion = d3.geoMercator(); // Creamos la función que realiza la proyección
+    var path = d3.geoPath(proyeccion); // Creamos la función generadora de caminos
+
+    var popup = d3.select("#popup");
+
+    // Dibujamos el mapa (triángulo en este caso)
+    svg.selectAll("path")
+      .data(trianguloGeoJson.features)
+      .enter()
+      .append("path")
+      .attr("d", path) // Genera el camino SVG
+      .attr("fill", "steelblue") // Color inicial
+      .attr("stroke", "black") // Borde del triángulo
+      .attr("stroke-width", 1)
+      .on("mouseover", function() {
+        d3.select(this).attr("fill", "red"); // Cambia el color al pasar el ratón
+      })
+      .on("mouseout", function() {
+        d3.select(this).attr("fill", "steelblue"); // Vuelve al color inicial
+      })
+      .on("click", function(event) {
+        // Detener propagación para evitar que el clic en el triángulo cierre el popup
+        event.stopPropagation();
+
+        // Obtener la posición del mouse relativa a la ventana
+        var [x, y] = d3.pointer(event);
+        popup
+          .style("left", (x + 10) + "px")
+          .style("top", (y + 10) + "px")
+          .style("display", "block");
+      });
+
+    // Ocultar el popup al hacer clic fuera del triángulo
+    d3.select("body").on("click", function() {
+      popup.style("display", "none");
+    });
+  </script>
+</body>
+</html>
