@@ -1,61 +1,334 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MY PERSONAL PORTFOLIO</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriela Alonso Úbeda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo"></div>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+<header>
+  <div class="logo">gabriela<span>.</span></div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+</header>
 
-  <!-- HEADER / HOME -->
-  <header id="home">
-    <h1>HI, I'M GABRIELA!</h1>
-    <p>Estudiante de Ingeniería Informática y Estadística en Valladolid</p>
-    
-  </header>
+<section id="home" class="hero" style="border-top:none;">
+  <div class="hero-text">
+    <h1>HI, I'M <span class="underline">GABRIELA</span>!</h1>
+    <p>Computer Engineering and Statistics student at the University of Valladolid.
+       Passionate about Artificial Intelligence, with a strong focus on Machine Learning applications and Data Science to solve real-world problems.</p>
+    <div class="btn-row">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About me</h2>
-    <div class="about-container">
-      <img src="orla_YO-Photoroom.png" alt="Foto de Gabriela" class="about-photo">
-      <p>
-        Soy estudiante de Ingeniería Informática y Estadística en la Universidad de Valladolid.
-        Me interesa la programación, el análisis de datos, la IA y el desarrollo web.
-      </p>
-      
     </div>
-  </section>
+  </div>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://gabi71299.github.io/envejecimiento-poblacion/">Visualización de datos con JavaScript y CSS</a></li>
-    </ul>
-  </section>
+  <img class="scatter" src="orla_YO.jpg" alt="Foto Orla">
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>gabriela.alonso.ubeda@gmail.com</p>
-  </section>
+<section id="about">
 
-  <!-- FOOTER -->
-  <footer>
-    Gabriela Alonso Úbeda</p>
-  </footer>
+  <h2>About me</h2>
+  <p>
+    I enjoy combining programming and statistics to solve real-world problems through data. 
+    <br>
+    I particularly enjoy designing predictive models, discovering patterns in data and transforming complex information into meaningful insights. 
+    <br><br>
+ 
+    Always passionate to tackle complex problems and continuously grow as a scientist and as a software engineer.
+     </p>
+      I am looking for opportunities that challenge me to solve problems through robust programming. 
+    <br>
+</section>
+
+<section id="skills">
+  <h2>Skills & Languages</h2>
+
+  <div class="skills-grid">
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="skill-group">
+      <h3>Technical Skills</h3>
+      <div class="skill-tags">
+        <span>Python</span>
+        <span>R</span>
+        <span>C</span>
+        <span>Java</span>
+        <span>SQL</span>
+        <span>PostgreSQL</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Scikit-learn</span>
+        <span>Matplotlib</span>
+        <span>Power BI</span>
+        <span>Excel</span>
+        <span>Git</span>
+        <span>Linux</span>
+        <span>Jupyter Notebook</span>
+        <span>VS Code</span>
+      </div>
+    </div>
+
+    <!-- AI & DATA -->
+    <div class="skill-group">
+      <h3>AI & Data</h3>
+      <div class="skill-tags">
+        <span>Machine Learning</span>
+        <span>Deep Learning</span>
+        <span>Computer Vision</span>
+        <span>Statistical Analysis</span>
+        <span>Data Analysis</span>
+        <span>Data Visualization</span>
+      </div>
+    </div>
+
+    <!-- PERSONAL SKILLS -->
+    <div class="skill-group">
+      <h3>Personal Skills</h3>
+      <div class="skill-tags">
+        <span>Analytical Thinking</span>
+        <span>Problem Solving</span>
+        <span>Teamwork</span>
+        <span>Adaptability</span>
+        <span>Organization</span>
+        <span>Continuous Learning</span>
+        <span>Attention to Detail</span>
+        <span>Scientific Thinking</span>
+      </div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="skill-group">
+      <h3>Languages</h3>
+
+      <div class="language-list">
+
+        <div class="language">
+          <div>
+            <strong>Spanish</strong>
+            <span>Native</span>
+          </div>
+          <div class="language-level">
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+          </div>
+        </div>
+
+        <div class="language">
+          <div>
+            <strong>English</strong>
+            <span>C1 · Advanced</span>
+          </div>
+          <div class="language-level">
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot"></span>
+          </div>
+        </div>
+
+        <div class="language">
+          <div>
+            <strong>French</strong>
+            <span>B1 · Intermediate</span>
+          </div>
+          <div class="language-level">
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot"></span>
+            <span class="level-dot"></span>
+          </div>
+        </div>
+
+        <div class="language">
+          <div>
+            <strong>Mandarin Chinese</strong>
+            <span>A2 · Elementary</span>
+          </div>
+          <div class="language-level">
+            <span class="level-dot active"></span>
+            <span class="level-dot active"></span>
+            <span class="level-dot"></span>
+            <span class="level-dot"></span>
+            <span class="level-dot"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Some projects</h2>
+
+  <div class="projects-grid">
+
+<article class="project-card">
+
+  <div class="project-number">01 / DATA VISUALIZATION</div>
+
+  <div class="project-content">
+
+    <span class="project-type">
+      Data Visualization · JavaScript · CSS
+    </span>
+
+    <h3>Visualización de datos con JavaScript y CSS</h3>
+
+    <p>
+      Interactive data visualization project developed with JavaScript and CSS to represent and explore population ageing data.
+    </p>
+
+    <div class="project-tech">
+      <span>JavaScript</span>
+      <span>CSS</span>
+      <span>Data Visualization</span>
+    </div>
+
+    <div class="project-links">
+      <a
+        href="https://gabi71299.github.io/envejecimiento-poblacion/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ↗ Live demo
+      </a>
+
+      <a
+        href="https://github.com/gabi71299/envejecimiento-poblacion.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ↗ GitHub repo
+      </a>
+    </div>
+
+  </div>
+
+</article>
+
+
+    <!-- PROJECT 02 -->
+    <article class="project-card">
+
+      <div class="project-number">02 / MACHINE LEARNING</div>
+
+      <div class="project-content">
+
+        <span class="project-type">
+          Machine Learning · Data Analysis
+        </span>
+
+        <h3>Football Match Outcome Prediction</h3>
+
+        <p>
+          Machine learning project focused on predicting football match
+          outcomes from historical data and identifying patterns that
+          contribute to predictive performance.
+        </p>
+
+        <div class="project-tech">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Scikit-learn</span>
+          <span>Matplotlib</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            href="https://github.com/gabi71299/Football-Match-Outcome-Prediction-using-Machine-Learning.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ↗ GitHub repo
+          </a>
+        </div>
+
+      </div>
+
+    </article>
+    <!-- PROJECT 03  TFG -->
+
+    <article class="project-card">
+
+      <div class="project-number">03 / MACHINE LEARNING</div>
+
+      <div class="project-content">
+
+    <span class="project-type">
+      Machine Learning · Python · Binary Classification
+    </span>
+
+    <h3>Binary Classification with Imbalanced Classes</h3>
+
+    <p>
+      Final Degree Project focused on the development of an application for
+      training binary classification models using techniques to address
+      imbalanced datasets.
+    </p>
+
+    <div class="project-tech">
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>Binary Classification</span>
+      <span>Imbalanced Data</span>
+    </div>
+
+    <div class="project-links">
+
+      <a
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ↗ GitHub repo 
+      </a>
+    </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-list">
+    <a class="contact-email" href="https://www.linkedin.com/in/gabriela-alonso-úbeda" target="_blank" rel="noopener">linkedin.com/in/gabriela-alonso-úbeda</a>
+    <a class="contact-email" href="mailto:gabriela.alonso.ubeda@gmail.com">gabriela.alonso.ubeda@gmail.com</a>
+    <a class="contact-email" href="tel:+34699049551">+34 699 04 95 51</a> 
+  </div>
+</section>
+
+<footer style="margin-top:2rem; padding:2rem 2.5rem; border-top:1px solid #ddd; text-align:center; font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:#777;">
+  <p> 
+    <strong style="color:#222; font-weight:500;">Gabriela Alonso Úbeda</strong>
+    <span style="color:coral;"> • </span>
+    Built with HTML, CSS &amp; JavaScript
+  </p>
+</footer>
+
 </body>
-
 </html>
